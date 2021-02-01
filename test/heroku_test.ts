@@ -13,7 +13,8 @@ fixture `Simple test`            // Notice the back-tick, NOT a single or double
             .click(`a[href="https://the-internet.herokuapp.com/login"]`)
             .typeText(`#username`, `tomsmith`)
             .typeText(`#password`, `SuperSecretpassword!`)
-            .expect(Selector(`a`))
+
+            .expect(Selector('.a').withText('Logout'))
 
         await sleep(5000);
 
